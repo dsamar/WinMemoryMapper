@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WinMemoryMapper
 {
-    public class Class1
+    public interface IValueEntity
     {
     }
 }
