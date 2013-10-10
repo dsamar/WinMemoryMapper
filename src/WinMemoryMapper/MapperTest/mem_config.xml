@@ -1,0 +1,30 @@
+﻿<root>
+  <val key="ObjectManagerAddress" type="System.Int32" address="0x18CE394">
+    <val key="ObjectManager_ofs_storage " type="System.Int32" offset="0x7CC"></val>
+    <val key="ObjectManagerStorage_ofs__local" type="System.Int32" address="0x1B8"></val>
+    <val key="ObjectManagerStorage_ofs__data" type="System.Int32" address="0x0A8"></val>
+    <val key="ObjectManagerStorage_ofs__attrib_groups" type="System.Int32" address="0x0C8"></val>
+  </val>
+  <val key="player_data_size" type="System.Int32" address="0x8598"></val>
+  <val key="player_ofs__area" type="System.Int32" address="0x78F8"></val>
+  <val key="player_ofs__seed" type="System.Int32" address="0x7448"></val>
+  <val key="player_ofs__name" type="System.Int32" address="0x7450"></val>
+  <val key="player_ofs__class" type="System.Int32" address="0x78FC"></val>
+  <val key="player_ofs__actor_id" type="System.Int32" address="0x8"></val>
+  <val key="acd_ofs__id" type="System.Int32" address="0x000"></val>
+  <val key="acd_ofs__gb_type" type="System.Int32" address="0x0B0"></val>
+  <val key="acd_ofs__gb_id" type="System.Int32" address="0x0B4"></val>
+  <val key="acd_ofs__attrib_group_id" type="System.Int32" address="0x120"></val>
+  <val key="acd_ofs__sno" type="System.Int32" address="0x090"></val>
+  <val key="acd_ofs__item_location" type="System.Int32" address="0x114"></val>
+  <val key="acd_ofs__item_x" type="System.Int32" address="0x118"></val>
+  <val key="acd_ofs__item_y" type="System.Int32" address="0x11C"></val>
+  <val key="acd_ofs__pos_x" type="System.Int32" address="0x0D0"></val>
+  <val key="acd_ofs__pos_y" type="System.Int32" address="0x0D4"></val>
+  <val key="acd_ofs__pos_z" type="System.Int32" address="0x0D8"></val>
+  <val key="acd_ofs__monster_type" type="System.Int32" address="0x0B8"></val>
+  <val key="attrib_link_ofs__next" type="System.Int32" address="0x000"></val>
+  <val key="attrib_link_ofs__id" type="System.Int32" address="0x004"></val>
+  <val key="attrib_link_ofs__value" type="System.Int32" address="0x008"></val>
+  <val key="AttribGroupsContainer_ofs__FastAttribGroups" type="System.Int32" address="0x070"></val>
+</root>

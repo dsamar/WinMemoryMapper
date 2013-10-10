@@ -8,7 +8,7 @@ namespace WinMemoryMapper
 {
     public interface IMemContainer
     {
-        public IDictionary<string, IValueEntity> Values
+        public IDictionary<string, object> Values
         {
             get;
         }

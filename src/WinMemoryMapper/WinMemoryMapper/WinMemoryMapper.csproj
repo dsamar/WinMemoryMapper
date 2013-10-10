@@ -39,9 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GenericContainer.cs" />
     <Compile Include="IMemContainer.cs" />
     <Compile Include="IMemoryMapper.cs" />
     <Compile Include="IValueEntity.cs" />
+    <Compile Include="Memory.cs" />
     <Compile Include="MemoryMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

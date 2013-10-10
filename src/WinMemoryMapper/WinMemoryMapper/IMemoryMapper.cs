@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WinMemoryMapper
 {
-    public interface IMemoryMapper : IDisposable
+    public interface IMemoryMapper
     {
         public IMemContainer MapMemory(string processName, string valueConfigFile);
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,10 +12,11 @@ namespace MapperTest
     {
         static void Main(string[] args)
         {
-            using (IMemoryMapper data = new MemoryMapper())
-            {
+            var process = Process.GetProcessesByName("diablo.exe").FirstOrDefault();
+            var data = new MemoryMapper();
+            var configFile = "some config file";
 
-            }
+            data.MapMemory(process, configFile);
         }
     }
 }
