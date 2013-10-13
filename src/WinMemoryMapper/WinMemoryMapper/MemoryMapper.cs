@@ -76,6 +76,12 @@ namespace WinMemoryMapper
         {
             // Open process for reading
             this.Process = process;
+
+        }
+
+        private uint BaseAddress
+        {
+            get { return (uint)Process.MainModule.BaseAddress; }
         }
 
         /// <summary>
@@ -152,7 +158,7 @@ namespace WinMemoryMapper
                     var chars = new List<char>();
                     uint offset = 0;
                     char lastChar;
-                    while ((lastChar = (char)Read(typeof(byte), address + offset)) != '\0')
+                    while ((lastChar = Convert.ToChar(Read(typeof(byte), address + offset))) != '\0')
                     {
                         offset++;
                         chars.Add(lastChar);
@@ -213,7 +219,7 @@ namespace WinMemoryMapper
                             IntPtr dataStore = Marshal.AllocHGlobal(numBytes);
                             byte[] data = ReadBytes(address, numBytes);
                             Marshal.Copy(data, 0, dataStore, numBytes);
-                            ret = Marshal.PtrToStructure(dataStore, typeof(T));
+                            ret = Marshal.PtrToStructure(dataStore, t);
                             Marshal.FreeHGlobal(dataStore);
                             break;
                     }

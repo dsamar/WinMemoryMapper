@@ -48,6 +48,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\D3MemDataLayer\D3MemDataLayer.csproj">
+      <Project>{551deb48-133d-4e0f-a773-8a65dda2442f}</Project>
+      <Name>D3MemDataLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WinMemoryMapper\WinMemoryMapper.csproj">
       <Project>{283b3583-e480-40ce-acc6-4fbf39452468}</Project>
       <Name>WinMemoryMapper</Name>

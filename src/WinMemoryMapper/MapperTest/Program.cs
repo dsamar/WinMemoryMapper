@@ -1,4 +1,5 @@
-﻿using System;
+﻿using D3MemDataLayer;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -12,11 +13,15 @@ namespace MapperTest
     {
         static void Main(string[] args)
         {
-            var process = Process.GetProcessesByName("diablo.exe").FirstOrDefault();
-            var data = new MemoryMapper();
-            var configFile = "some config file";
+            var process = Process.GetProcessesByName("").FirstOrDefault();
+            if (process == null)
+            {
+                throw new NullReferenceException("process");
+            }
 
-            data.MapMemory(process, configFile);
+            var data = new ObjectManagerMemContainer(process);
+
+            Console.Out.WriteLine(data.Player.CharacterName);
         }
     }
 }
