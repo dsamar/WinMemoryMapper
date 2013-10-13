@@ -72,27 +72,10 @@ namespace WinMemoryMapper
         /// <param name="process">The process.</param>
         /// <param name="valueConfigFile">The value configuration file.</param>
         /// <returns></returns>
-        public IMemContainer MapMemory(Process process, string valueConfigFile)
+        public MemoryMapper(Process process)
         {
             // Open process for reading
             this.Process = process;
-            var xdoc = XDocument.Load(valueConfigFile);
-            var entries = from e in xdoc.Descendants("val")
-                          select new
-                          {
-                              Key = (string)e.Attribute("key"),
-                              Type = (Type)Type.GetType(e.Attribute("type").ToString()),
-                              Address = uint.Parse(e.Attribute("address").ToString(), NumberStyles.HexNumber)
-                          };
-
-            var ret = new GenericContainer();
-            foreach (var e in entries)
-            {
-                var val = this.Read(e.Type, e.Address);
-                ret.Values.Add(e.Key, val);
-            }
-
-            return ret;
         }
 
         /// <summary>
@@ -142,34 +125,16 @@ namespace WinMemoryMapper
             return Activator.CreateInstance(t);
         }
 
-        //private void example()
-        //{
-        //    int ObjectManagerPtr = MR.ReadInt(ObjectManagerAddress);
-        //    int ObjectManagerStoragePtr = ObjectManagerPtr + ObjectManager_ofs_storage;
-        //    int ObjectManagerStorageDataPtr = MR.ReadInt(ObjectManagerStoragePtr + ObjectManagerStorage_ofs__data);
-        //    int ObjectManagerStorageLocalPtr = MR.ReadInt(ObjectManagerStoragePtr + ObjectManagerStorage_ofs__local);
-        //    int MyPlayerIndex = MR.ReadInt(ObjectManagerStorageLocalPtr);
-
-        //    for (int i = 0; i < 4; i++)
-        //    {
-        //        uint seed = MR.ReadUInt(ObjectManagerStorageDataPtr + i * player_data_size + 0x58 + player_ofs__seed);
-        //        if (seed == 0) continue;
-        //        string CharacterName = MR.ReadString(ObjectManagerStorageDataPtr + i * player_data_size + 0x58 + player_ofs__name, 12 + 1, Encoding.ASCII, true);
-        //        uint class_idx = MR.ReadUInt(ObjectManagerStorageDataPtr + i * player_data_size + 0x58 + player_ofs__class); // 0=DH, 1=barb, 2=wiz, 3=wd, 4=monk
-
-        //        uint levelarea_id = MR.ReadUInt(ObjectManagerStorageDataPtr + i * player_data_size + 0x58 + player_ofs__area);
-        //        if (MyPlayerIndex == i)
-        //        {
-        //            // tadamm: this is our player's levelarea_id and other stuff
-        //        }
-
-        //        uint ActorID = MR.ReadUInt(ObjectManagerStorageDataPtr + i * player_data_size + 0x58 + player_ofs__actor_id);
-        //        if ((ActorID == 0) || (ActorID == uint.MaxValue))
-        //        {
-        //            // our player's actor is always valid, but party members too far from us will "disappear"
-        //        }
-        //    }
-        //}
+        /// <summary>
+        /// Reads the specified addresses.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="addresses">The addresses.</param>
+        /// <returns></returns>
+        public T Read<T>(params uint[] addresses)
+        {
+            return (T)this.Read(typeof(T), addresses);
+        }
 
         /// <summary>
         /// Reads the internal.
