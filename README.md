@@ -1,4 +1,4 @@
 WinMemoryMapper
 ===============
 
-Memory Mapper for Windows Processes
+Memory Mapper for Win32 Executables
