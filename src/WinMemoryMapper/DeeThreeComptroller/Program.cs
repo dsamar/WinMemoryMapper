@@ -3,15 +3,18 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using WinMemoryMapper;
+using System.Windows.Forms;
 
-namespace MapperTest
+namespace DeeThreeComptroller
 {
-    class Program
+    static class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
         {
             var process = Process.GetProcessesByName("Diablo III").FirstOrDefault();
             if (process == null)
@@ -22,6 +25,10 @@ namespace MapperTest
             var data = new ObjectManagerMemContainer(process);
 
             Console.Out.WriteLine(data.Player.CharacterName);
+
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new MonitorScreen(data));
         }
     }
 }
