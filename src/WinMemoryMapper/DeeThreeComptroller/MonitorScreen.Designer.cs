@@ -38,6 +38,10 @@
             this.ACDCountTextBox = new System.Windows.Forms.TextBox();
             this.ACDCountLabel = new System.Windows.Forms.Label();
             this.ACDListBox = new System.Windows.Forms.ListBox();
+            this.ACDGBTypeTextBox = new System.Windows.Forms.TextBox();
+            this.ACDGBTypeLabel = new System.Windows.Forms.Label();
+            this.MapPictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.MapPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // CharacterNameLabel
@@ -97,7 +101,7 @@
             this.RefreshAllButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.RefreshAllButton.Location = new System.Drawing.Point(0, 566);
             this.RefreshAllButton.Name = "RefreshAllButton";
-            this.RefreshAllButton.Size = new System.Drawing.Size(550, 30);
+            this.RefreshAllButton.Size = new System.Drawing.Size(947, 30);
             this.RefreshAllButton.TabIndex = 6;
             this.RefreshAllButton.Text = "Refresh All";
             this.RefreshAllButton.UseVisualStyleBackColor = true;
@@ -123,16 +127,44 @@
             // ACDListBox
             // 
             this.ACDListBox.FormattingEnabled = true;
-            this.ACDListBox.Location = new System.Drawing.Point(16, 123);
+            this.ACDListBox.Location = new System.Drawing.Point(16, 162);
             this.ACDListBox.Name = "ACDListBox";
-            this.ACDListBox.Size = new System.Drawing.Size(258, 433);
+            this.ACDListBox.Size = new System.Drawing.Size(258, 394);
             this.ACDListBox.TabIndex = 9;
+            // 
+            // ACDGBTypeTextBox
+            // 
+            this.ACDGBTypeTextBox.Location = new System.Drawing.Point(116, 124);
+            this.ACDGBTypeTextBox.Name = "ACDGBTypeTextBox";
+            this.ACDGBTypeTextBox.Size = new System.Drawing.Size(158, 20);
+            this.ACDGBTypeTextBox.TabIndex = 10;
+            this.ACDGBTypeTextBox.Text = "-1";
+            // 
+            // ACDGBTypeLabel
+            // 
+            this.ACDGBTypeLabel.AutoSize = true;
+            this.ACDGBTypeLabel.Location = new System.Drawing.Point(13, 127);
+            this.ACDGBTypeLabel.Name = "ACDGBTypeLabel";
+            this.ACDGBTypeLabel.Size = new System.Drawing.Size(74, 13);
+            this.ACDGBTypeLabel.TabIndex = 11;
+            this.ACDGBTypeLabel.Text = "ACD GB Type";
+            // 
+            // MapPictureBox
+            // 
+            this.MapPictureBox.Location = new System.Drawing.Point(289, 10);
+            this.MapPictureBox.Name = "MapPictureBox";
+            this.MapPictureBox.Size = new System.Drawing.Size(646, 546);
+            this.MapPictureBox.TabIndex = 12;
+            this.MapPictureBox.TabStop = false;
             // 
             // MonitorScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 596);
+            this.ClientSize = new System.Drawing.Size(947, 596);
+            this.Controls.Add(this.MapPictureBox);
+            this.Controls.Add(this.ACDGBTypeLabel);
+            this.Controls.Add(this.ACDGBTypeTextBox);
             this.Controls.Add(this.ACDListBox);
             this.Controls.Add(this.ACDCountTextBox);
             this.Controls.Add(this.ACDCountLabel);
@@ -145,6 +177,7 @@
             this.Controls.Add(this.CharacterNameLabel);
             this.Name = "MonitorScreen";
             this.Text = "Monitor Screen";
+            ((System.ComponentModel.ISupportInitialize)(this.MapPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,6 +195,9 @@
         private System.Windows.Forms.TextBox ACDCountTextBox;
         private System.Windows.Forms.Label ACDCountLabel;
         private System.Windows.Forms.ListBox ACDListBox;
+        private System.Windows.Forms.TextBox ACDGBTypeTextBox;
+        private System.Windows.Forms.Label ACDGBTypeLabel;
+        private System.Windows.Forms.PictureBox MapPictureBox;
     }
 }
 

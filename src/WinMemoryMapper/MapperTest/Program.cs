@@ -19,7 +19,7 @@ namespace MapperTest
                 throw new NullReferenceException("process");
             }
 
-            var data = new ObjectManagerMemContainer(process);
+            var data = new ObjectManager(process);
 
             Console.Out.WriteLine(data.Player.CharacterName);
         }

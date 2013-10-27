@@ -52,12 +52,7 @@ namespace WinMemoryMapper
         /// <returns></returns>
         [DllImport("kernel32.dll"), SuppressUnmanagedCodeSecurity]
         internal static extern IntPtr OpenProcess(uint dwDesiredAccess, bool bInheritHandle, int dwProcessId);
-
-        /// <summary>
-        /// The disposed
-        /// </summary>
-        private bool disposed;
-
+        
         /// <summary>
         /// Gets or sets the process.
         /// </summary>

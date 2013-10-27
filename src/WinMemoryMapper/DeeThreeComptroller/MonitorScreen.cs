@@ -1,4 +1,5 @@
 ﻿using D3MemDataLayer;
+using D3MemDataLayer.Constants;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,14 +14,14 @@ namespace DeeThreeComptroller
 {
     public partial class MonitorScreen : Form
     {
-        private ObjectManagerMemContainer data;
+        private ObjectManager data;
 
         public MonitorScreen()
         {
             InitializeComponent();
         }
 
-        public MonitorScreen(ObjectManagerMemContainer data) 
+        public MonitorScreen(ObjectManager data) 
         {
             InitializeComponent();
             this.data = data;
@@ -34,7 +35,7 @@ namespace DeeThreeComptroller
             this.ACDCountTextBox.Text = this.data.ACDs.ACDCount.ToString();
 
             this.ACDListBox.Items.Clear();
-            foreach (var acd in this.data.ACDs.ACDList)
+            foreach (var acd in this.data.ACDs.List.Where(f => f.GameBalanceType == int.Parse(this.ACDGBTypeTextBox.Text)))
             {
                 this.ACDListBox.Items.Add(acd);
             }
