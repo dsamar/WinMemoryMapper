@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapperTest", "MapperTest\Ma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D3MemDataLayer", "D3MemDataLayer\D3MemDataLayer.csproj", "{551DEB48-133D-4E0F-A773-8A65DDA2442F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeeThreeComptroller", "DeeThreeComptroller\DeeThreeComptroller.csproj", "{667B1DEE-399B-4A2C-9425-85FB310523D1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheComptroller", "DeeThreeComptroller\TheComptroller.csproj", "{667B1DEE-399B-4A2C-9425-85FB310523D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendInputLib", "SendInputLib\SendInputLib.csproj", "{5BF7DD3E-20D8-4A99-B90B-F34306B73EA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{667B1DEE-399B-4A2C-9425-85FB310523D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{667B1DEE-399B-4A2C-9425-85FB310523D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{667B1DEE-399B-4A2C-9425-85FB310523D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BF7DD3E-20D8-4A99-B90B-F34306B73EA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BF7DD3E-20D8-4A99-B90B-F34306B73EA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BF7DD3E-20D8-4A99-B90B-F34306B73EA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BF7DD3E-20D8-4A99-B90B-F34306B73EA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

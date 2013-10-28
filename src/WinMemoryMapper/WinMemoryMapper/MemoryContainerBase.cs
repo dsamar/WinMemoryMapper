@@ -15,8 +15,15 @@ namespace WinMemoryMapper
         /// <summary>
         /// Initializes a new instance of the <see cref="MemoryContainerBase"/> class.
         /// </summary>
+        public MemoryContainerBase()
+        {
+        }
+
+        /// <summary>
+        /// Initializes the specified memory mapper.
+        /// </summary>
         /// <param name="memMapper">The memory mapper.</param>
-        public MemoryContainerBase(IMemoryMapper memMapper)
+        public void Initialize(IMemoryMapper memMapper)
         {
             this.Mapper = memMapper;
         }
@@ -27,6 +34,6 @@ namespace WinMemoryMapper
         /// <value>
         /// The memory mapper.
         /// </value>
-        protected IMemoryMapper Mapper { get; private set; }
+        public IMemoryMapper Mapper { get; set; }
     }
 }

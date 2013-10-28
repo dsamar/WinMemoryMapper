@@ -12,7 +12,7 @@ using System.Xml.Linq;
 
 namespace WinMemoryMapper
 {
-    public class MemoryMapper : IMemoryMapper
+    public class MemoryMapperService : IMemoryMapper
     {
         /// <summary>
         /// The defaul t_ memor y_ size
@@ -67,7 +67,7 @@ namespace WinMemoryMapper
         /// <param name="process">The process.</param>
         /// <param name="valueConfigFile">The value configuration file.</param>
         /// <returns></returns>
-        public MemoryMapper(Process process)
+        public MemoryMapperService(Process process)
         {
             // Open process for reading
             this.Process = process;

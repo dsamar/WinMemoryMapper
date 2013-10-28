@@ -1,4 +1,5 @@
 ﻿using D3MemDataLayer;
+using SendInputLib;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -22,13 +23,14 @@ namespace DeeThreeComptroller
                 throw new NullReferenceException("process");
             }
 
-            var data = new ObjectManager(process);
+            var DataService = new ObjectManager(process);
+            var InputService = new SendMessageService(process);
 
-            Console.Out.WriteLine(data.Player.CharacterName);
+            Console.Out.WriteLine(DataService.Player.CharacterName);
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MonitorScreen(data));
+            Application.Run(new MonitorScreen(DataService, InputService));
         }
     }
 }

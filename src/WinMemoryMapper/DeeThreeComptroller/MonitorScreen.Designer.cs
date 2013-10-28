@@ -38,9 +38,12 @@
             this.ACDCountTextBox = new System.Windows.Forms.TextBox();
             this.ACDCountLabel = new System.Windows.Forms.Label();
             this.ACDListBox = new System.Windows.Forms.ListBox();
-            this.ACDGBTypeTextBox = new System.Windows.Forms.TextBox();
-            this.ACDGBTypeLabel = new System.Windows.Forms.Label();
             this.MapPictureBox = new System.Windows.Forms.PictureBox();
+            this.SendKeyButton = new System.Windows.Forms.Button();
+            this.SendKeyTextBox = new System.Windows.Forms.TextBox();
+            this.SendLeftClickButton = new System.Windows.Forms.Button();
+            this.XPosTextBox = new System.Windows.Forms.TextBox();
+            this.YPosTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.MapPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,27 +130,10 @@
             // ACDListBox
             // 
             this.ACDListBox.FormattingEnabled = true;
-            this.ACDListBox.Location = new System.Drawing.Point(16, 162);
+            this.ACDListBox.Location = new System.Drawing.Point(16, 136);
             this.ACDListBox.Name = "ACDListBox";
-            this.ACDListBox.Size = new System.Drawing.Size(258, 394);
+            this.ACDListBox.Size = new System.Drawing.Size(258, 238);
             this.ACDListBox.TabIndex = 9;
-            // 
-            // ACDGBTypeTextBox
-            // 
-            this.ACDGBTypeTextBox.Location = new System.Drawing.Point(116, 124);
-            this.ACDGBTypeTextBox.Name = "ACDGBTypeTextBox";
-            this.ACDGBTypeTextBox.Size = new System.Drawing.Size(158, 20);
-            this.ACDGBTypeTextBox.TabIndex = 10;
-            this.ACDGBTypeTextBox.Text = "-1";
-            // 
-            // ACDGBTypeLabel
-            // 
-            this.ACDGBTypeLabel.AutoSize = true;
-            this.ACDGBTypeLabel.Location = new System.Drawing.Point(13, 127);
-            this.ACDGBTypeLabel.Name = "ACDGBTypeLabel";
-            this.ACDGBTypeLabel.Size = new System.Drawing.Size(74, 13);
-            this.ACDGBTypeLabel.TabIndex = 11;
-            this.ACDGBTypeLabel.Text = "ACD GB Type";
             // 
             // MapPictureBox
             // 
@@ -157,14 +143,59 @@
             this.MapPictureBox.TabIndex = 12;
             this.MapPictureBox.TabStop = false;
             // 
+            // SendKeyButton
+            // 
+            this.SendKeyButton.Location = new System.Drawing.Point(16, 380);
+            this.SendKeyButton.Name = "SendKeyButton";
+            this.SendKeyButton.Size = new System.Drawing.Size(75, 23);
+            this.SendKeyButton.TabIndex = 13;
+            this.SendKeyButton.Text = "Send Key";
+            this.SendKeyButton.UseVisualStyleBackColor = true;
+            this.SendKeyButton.Click += new System.EventHandler(this.SendKeyButton_Click);
+            // 
+            // SendKeyTextBox
+            // 
+            this.SendKeyTextBox.Enabled = false;
+            this.SendKeyTextBox.Location = new System.Drawing.Point(97, 381);
+            this.SendKeyTextBox.Name = "SendKeyTextBox";
+            this.SendKeyTextBox.Size = new System.Drawing.Size(177, 20);
+            this.SendKeyTextBox.TabIndex = 14;
+            // 
+            // SendLeftClickButton
+            // 
+            this.SendLeftClickButton.Location = new System.Drawing.Point(16, 409);
+            this.SendLeftClickButton.Name = "SendLeftClickButton";
+            this.SendLeftClickButton.Size = new System.Drawing.Size(144, 23);
+            this.SendLeftClickButton.TabIndex = 15;
+            this.SendLeftClickButton.Text = "Send Left Click";
+            this.SendLeftClickButton.UseVisualStyleBackColor = true;
+            this.SendLeftClickButton.Click += new System.EventHandler(this.SendLeftClickButton_Click);
+            // 
+            // XPosTextBox
+            // 
+            this.XPosTextBox.Location = new System.Drawing.Point(166, 409);
+            this.XPosTextBox.Name = "XPosTextBox";
+            this.XPosTextBox.Size = new System.Drawing.Size(51, 20);
+            this.XPosTextBox.TabIndex = 16;
+            // 
+            // YPosTextBox
+            // 
+            this.YPosTextBox.Location = new System.Drawing.Point(223, 409);
+            this.YPosTextBox.Name = "YPosTextBox";
+            this.YPosTextBox.Size = new System.Drawing.Size(51, 20);
+            this.YPosTextBox.TabIndex = 17;
+            // 
             // MonitorScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(947, 596);
+            this.Controls.Add(this.YPosTextBox);
+            this.Controls.Add(this.XPosTextBox);
+            this.Controls.Add(this.SendLeftClickButton);
+            this.Controls.Add(this.SendKeyTextBox);
+            this.Controls.Add(this.SendKeyButton);
             this.Controls.Add(this.MapPictureBox);
-            this.Controls.Add(this.ACDGBTypeLabel);
-            this.Controls.Add(this.ACDGBTypeTextBox);
             this.Controls.Add(this.ACDListBox);
             this.Controls.Add(this.ACDCountTextBox);
             this.Controls.Add(this.ACDCountLabel);
@@ -195,9 +226,12 @@
         private System.Windows.Forms.TextBox ACDCountTextBox;
         private System.Windows.Forms.Label ACDCountLabel;
         private System.Windows.Forms.ListBox ACDListBox;
-        private System.Windows.Forms.TextBox ACDGBTypeTextBox;
-        private System.Windows.Forms.Label ACDGBTypeLabel;
         private System.Windows.Forms.PictureBox MapPictureBox;
+        private System.Windows.Forms.Button SendKeyButton;
+        private System.Windows.Forms.TextBox SendKeyTextBox;
+        private System.Windows.Forms.Button SendLeftClickButton;
+        private System.Windows.Forms.TextBox XPosTextBox;
+        private System.Windows.Forms.TextBox YPosTextBox;
     }
 }
 
