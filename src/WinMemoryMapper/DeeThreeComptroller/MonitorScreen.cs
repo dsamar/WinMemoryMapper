@@ -1,5 +1,6 @@
 ﻿using D3MemDataLayer;
 using D3MemDataLayer.Constants;
+using LogicServiceLib;
 using SendInputLib;
 using System;
 using System.Collections.Generic;
@@ -19,16 +20,19 @@ namespace DeeThreeComptroller
 
         public ObjectManager DataService { get; set; }
 
+        public ILogicService LogicService { get; set; }
+
         public MonitorScreen()
         {
             InitializeComponent();
         }
 
-        public MonitorScreen(ObjectManager data, ISendMessageService inputService) 
+        public MonitorScreen(ObjectManager data, ISendMessageService inputService, ILogicService logic) 
         {
             InitializeComponent();
             this.DataService = data;
             this.InputService = inputService;
+            this.LogicService = logic;
         }
 
         private void RefreshAllButton_Click(object sender, EventArgs e)
@@ -46,23 +50,25 @@ namespace DeeThreeComptroller
         }
 
         /// <summary>
-        /// Handles the Click event of the SendKeyButton control.
+        /// Handles the Click event of the AbortLogicButton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
-        private void SendKeyButton_Click(object sender, EventArgs e)
+        private void AbortLogicButton_Click(object sender, EventArgs e)
         {
-            this.InputService.SendKeyStroke((uint)Keys.D1);
+            this.LogicService.AbortLogic();
         }
 
         /// <summary>
-        /// Handles the Click event of the SendLeftClickButton control.
+        /// Handles the Click event of the StartLogicButton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
-        private void SendLeftClickButton_Click(object sender, EventArgs e)
+        private void StartLogicButton_Click(object sender, EventArgs e)
         {
-            this.InputService.SendLeftClick(int.Parse(this.XPosTextBox.Text), int.Parse(this.YPosTextBox.Text));
+            this.LogicService.RunLogic();
         }
+
+        
     }
 }

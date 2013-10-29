@@ -39,11 +39,8 @@
             this.ACDCountLabel = new System.Windows.Forms.Label();
             this.ACDListBox = new System.Windows.Forms.ListBox();
             this.MapPictureBox = new System.Windows.Forms.PictureBox();
-            this.SendKeyButton = new System.Windows.Forms.Button();
-            this.SendKeyTextBox = new System.Windows.Forms.TextBox();
-            this.SendLeftClickButton = new System.Windows.Forms.Button();
-            this.XPosTextBox = new System.Windows.Forms.TextBox();
-            this.YPosTextBox = new System.Windows.Forms.TextBox();
+            this.StartLogicButton = new System.Windows.Forms.Button();
+            this.AbortLogicButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.MapPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -143,58 +140,33 @@
             this.MapPictureBox.TabIndex = 12;
             this.MapPictureBox.TabStop = false;
             // 
-            // SendKeyButton
+            // StartLogicButton
             // 
-            this.SendKeyButton.Location = new System.Drawing.Point(16, 380);
-            this.SendKeyButton.Name = "SendKeyButton";
-            this.SendKeyButton.Size = new System.Drawing.Size(75, 23);
-            this.SendKeyButton.TabIndex = 13;
-            this.SendKeyButton.Text = "Send Key";
-            this.SendKeyButton.UseVisualStyleBackColor = true;
-            this.SendKeyButton.Click += new System.EventHandler(this.SendKeyButton_Click);
+            this.StartLogicButton.Location = new System.Drawing.Point(16, 380);
+            this.StartLogicButton.Name = "StartLogicButton";
+            this.StartLogicButton.Size = new System.Drawing.Size(75, 23);
+            this.StartLogicButton.TabIndex = 13;
+            this.StartLogicButton.Text = "Start Logic";
+            this.StartLogicButton.UseVisualStyleBackColor = true;
+            this.StartLogicButton.Click += new System.EventHandler(this.StartLogicButton_Click);
             // 
-            // SendKeyTextBox
+            // AbortLogicButton
             // 
-            this.SendKeyTextBox.Enabled = false;
-            this.SendKeyTextBox.Location = new System.Drawing.Point(97, 381);
-            this.SendKeyTextBox.Name = "SendKeyTextBox";
-            this.SendKeyTextBox.Size = new System.Drawing.Size(177, 20);
-            this.SendKeyTextBox.TabIndex = 14;
-            // 
-            // SendLeftClickButton
-            // 
-            this.SendLeftClickButton.Location = new System.Drawing.Point(16, 409);
-            this.SendLeftClickButton.Name = "SendLeftClickButton";
-            this.SendLeftClickButton.Size = new System.Drawing.Size(144, 23);
-            this.SendLeftClickButton.TabIndex = 15;
-            this.SendLeftClickButton.Text = "Send Left Click";
-            this.SendLeftClickButton.UseVisualStyleBackColor = true;
-            this.SendLeftClickButton.Click += new System.EventHandler(this.SendLeftClickButton_Click);
-            // 
-            // XPosTextBox
-            // 
-            this.XPosTextBox.Location = new System.Drawing.Point(166, 409);
-            this.XPosTextBox.Name = "XPosTextBox";
-            this.XPosTextBox.Size = new System.Drawing.Size(51, 20);
-            this.XPosTextBox.TabIndex = 16;
-            // 
-            // YPosTextBox
-            // 
-            this.YPosTextBox.Location = new System.Drawing.Point(223, 409);
-            this.YPosTextBox.Name = "YPosTextBox";
-            this.YPosTextBox.Size = new System.Drawing.Size(51, 20);
-            this.YPosTextBox.TabIndex = 17;
+            this.AbortLogicButton.Location = new System.Drawing.Point(199, 380);
+            this.AbortLogicButton.Name = "AbortLogicButton";
+            this.AbortLogicButton.Size = new System.Drawing.Size(75, 23);
+            this.AbortLogicButton.TabIndex = 14;
+            this.AbortLogicButton.Text = "Abort Logic";
+            this.AbortLogicButton.UseVisualStyleBackColor = true;
+            this.AbortLogicButton.Click += new System.EventHandler(this.AbortLogicButton_Click);
             // 
             // MonitorScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(947, 596);
-            this.Controls.Add(this.YPosTextBox);
-            this.Controls.Add(this.XPosTextBox);
-            this.Controls.Add(this.SendLeftClickButton);
-            this.Controls.Add(this.SendKeyTextBox);
-            this.Controls.Add(this.SendKeyButton);
+            this.Controls.Add(this.AbortLogicButton);
+            this.Controls.Add(this.StartLogicButton);
             this.Controls.Add(this.MapPictureBox);
             this.Controls.Add(this.ACDListBox);
             this.Controls.Add(this.ACDCountTextBox);
@@ -227,11 +199,8 @@
         private System.Windows.Forms.Label ACDCountLabel;
         private System.Windows.Forms.ListBox ACDListBox;
         private System.Windows.Forms.PictureBox MapPictureBox;
-        private System.Windows.Forms.Button SendKeyButton;
-        private System.Windows.Forms.TextBox SendKeyTextBox;
-        private System.Windows.Forms.Button SendLeftClickButton;
-        private System.Windows.Forms.TextBox XPosTextBox;
-        private System.Windows.Forms.TextBox YPosTextBox;
+        private System.Windows.Forms.Button StartLogicButton;
+        private System.Windows.Forms.Button AbortLogicButton;
     }
 }
 

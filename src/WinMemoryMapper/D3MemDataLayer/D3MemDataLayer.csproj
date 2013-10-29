@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="ACD.cs" />
     <Compile Include="AttributeGroup.cs" />
+    <Compile Include="AttributeValue.cs" />
     <Compile Include="Constants\AttributeCodes.cs" />
     <Compile Include="Constants\GameBalanceCodes.cs" />
     <Compile Include="Constants\LevelAreaCodes.cs" />

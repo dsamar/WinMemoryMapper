@@ -1,4 +1,5 @@
 ﻿using D3MemDataLayer;
+using LogicServiceLib;
 using SendInputLib;
 using System;
 using System.Collections.Generic;
@@ -25,12 +26,13 @@ namespace DeeThreeComptroller
 
             var DataService = new ObjectManager(process);
             var InputService = new SendMessageService(process);
+            var LogicService = new BasicLogicService(DataService, InputService);
 
             Console.Out.WriteLine(DataService.Player.CharacterName);
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MonitorScreen(DataService, InputService));
+            Application.Run(new MonitorScreen(DataService, InputService, LogicService));
         }
     }
 }

@@ -99,6 +99,10 @@
       <Project>{551deb48-133d-4e0f-a773-8a65dda2442f}</Project>
       <Name>D3MemDataLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LogicServiceLib\LogicServiceLib.csproj">
+      <Project>{df82f400-1a7a-47d0-9b85-bf431aa4672d}</Project>
+      <Name>LogicServiceLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SendInputLib\SendInputLib.csproj">
       <Project>{5bf7dd3e-20d8-4a99-b90b-f34306b73ea6}</Project>
       <Name>SendInputLib</Name>
