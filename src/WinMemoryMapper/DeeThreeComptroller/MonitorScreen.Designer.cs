@@ -38,10 +38,12 @@
             this.ACDCountTextBox = new System.Windows.Forms.TextBox();
             this.ACDCountLabel = new System.Windows.Forms.Label();
             this.ACDListBox = new System.Windows.Forms.ListBox();
-            this.MapPictureBox = new System.Windows.Forms.PictureBox();
             this.StartLogicButton = new System.Windows.Forms.Button();
             this.AbortLogicButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.MapPictureBox)).BeginInit();
+            this.TargetQuadTextBox = new System.Windows.Forms.TextBox();
+            this.TargetQuadLabel = new System.Windows.Forms.Label();
+            this.TargetAngleTextBox = new System.Windows.Forms.TextBox();
+            this.TargetAngleLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // CharacterNameLabel
@@ -101,7 +103,7 @@
             this.RefreshAllButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.RefreshAllButton.Location = new System.Drawing.Point(0, 566);
             this.RefreshAllButton.Name = "RefreshAllButton";
-            this.RefreshAllButton.Size = new System.Drawing.Size(947, 30);
+            this.RefreshAllButton.Size = new System.Drawing.Size(297, 30);
             this.RefreshAllButton.TabIndex = 6;
             this.RefreshAllButton.Text = "Refresh All";
             this.RefreshAllButton.UseVisualStyleBackColor = true;
@@ -132,19 +134,11 @@
             this.ACDListBox.Size = new System.Drawing.Size(258, 238);
             this.ACDListBox.TabIndex = 9;
             // 
-            // MapPictureBox
-            // 
-            this.MapPictureBox.Location = new System.Drawing.Point(289, 10);
-            this.MapPictureBox.Name = "MapPictureBox";
-            this.MapPictureBox.Size = new System.Drawing.Size(646, 546);
-            this.MapPictureBox.TabIndex = 12;
-            this.MapPictureBox.TabStop = false;
-            // 
             // StartLogicButton
             // 
-            this.StartLogicButton.Location = new System.Drawing.Point(16, 380);
+            this.StartLogicButton.Location = new System.Drawing.Point(0, 537);
             this.StartLogicButton.Name = "StartLogicButton";
-            this.StartLogicButton.Size = new System.Drawing.Size(75, 23);
+            this.StartLogicButton.Size = new System.Drawing.Size(146, 23);
             this.StartLogicButton.TabIndex = 13;
             this.StartLogicButton.Text = "Start Logic";
             this.StartLogicButton.UseVisualStyleBackColor = true;
@@ -152,22 +146,59 @@
             // 
             // AbortLogicButton
             // 
-            this.AbortLogicButton.Location = new System.Drawing.Point(199, 380);
+            this.AbortLogicButton.Location = new System.Drawing.Point(160, 537);
             this.AbortLogicButton.Name = "AbortLogicButton";
-            this.AbortLogicButton.Size = new System.Drawing.Size(75, 23);
+            this.AbortLogicButton.Size = new System.Drawing.Size(137, 23);
             this.AbortLogicButton.TabIndex = 14;
             this.AbortLogicButton.Text = "Abort Logic";
             this.AbortLogicButton.UseVisualStyleBackColor = true;
             this.AbortLogicButton.Click += new System.EventHandler(this.AbortLogicButton_Click);
             // 
+            // TargetQuadTextBox
+            // 
+            this.TargetQuadTextBox.Enabled = false;
+            this.TargetQuadTextBox.Location = new System.Drawing.Point(116, 380);
+            this.TargetQuadTextBox.Name = "TargetQuadTextBox";
+            this.TargetQuadTextBox.Size = new System.Drawing.Size(158, 20);
+            this.TargetQuadTextBox.TabIndex = 16;
+            // 
+            // TargetQuadLabel
+            // 
+            this.TargetQuadLabel.AutoSize = true;
+            this.TargetQuadLabel.Location = new System.Drawing.Point(13, 384);
+            this.TargetQuadLabel.Name = "TargetQuadLabel";
+            this.TargetQuadLabel.Size = new System.Drawing.Size(85, 13);
+            this.TargetQuadLabel.TabIndex = 15;
+            this.TargetQuadLabel.Text = "Target Quadrant";
+            // 
+            // TargetAngleTextBox
+            // 
+            this.TargetAngleTextBox.Enabled = false;
+            this.TargetAngleTextBox.Location = new System.Drawing.Point(116, 406);
+            this.TargetAngleTextBox.Name = "TargetAngleTextBox";
+            this.TargetAngleTextBox.Size = new System.Drawing.Size(158, 20);
+            this.TargetAngleTextBox.TabIndex = 18;
+            // 
+            // TargetAngleLabel
+            // 
+            this.TargetAngleLabel.AutoSize = true;
+            this.TargetAngleLabel.Location = new System.Drawing.Point(13, 410);
+            this.TargetAngleLabel.Name = "TargetAngleLabel";
+            this.TargetAngleLabel.Size = new System.Drawing.Size(68, 13);
+            this.TargetAngleLabel.TabIndex = 17;
+            this.TargetAngleLabel.Text = "Target Angle";
+            // 
             // MonitorScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(947, 596);
+            this.ClientSize = new System.Drawing.Size(297, 596);
+            this.Controls.Add(this.TargetAngleTextBox);
+            this.Controls.Add(this.TargetAngleLabel);
+            this.Controls.Add(this.TargetQuadTextBox);
+            this.Controls.Add(this.TargetQuadLabel);
             this.Controls.Add(this.AbortLogicButton);
             this.Controls.Add(this.StartLogicButton);
-            this.Controls.Add(this.MapPictureBox);
             this.Controls.Add(this.ACDListBox);
             this.Controls.Add(this.ACDCountTextBox);
             this.Controls.Add(this.ACDCountLabel);
@@ -180,7 +211,6 @@
             this.Controls.Add(this.CharacterNameLabel);
             this.Name = "MonitorScreen";
             this.Text = "Monitor Screen";
-            ((System.ComponentModel.ISupportInitialize)(this.MapPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,9 +228,12 @@
         private System.Windows.Forms.TextBox ACDCountTextBox;
         private System.Windows.Forms.Label ACDCountLabel;
         private System.Windows.Forms.ListBox ACDListBox;
-        private System.Windows.Forms.PictureBox MapPictureBox;
         private System.Windows.Forms.Button StartLogicButton;
         private System.Windows.Forms.Button AbortLogicButton;
+        private System.Windows.Forms.TextBox TargetQuadTextBox;
+        private System.Windows.Forms.Label TargetQuadLabel;
+        private System.Windows.Forms.TextBox TargetAngleTextBox;
+        private System.Windows.Forms.Label TargetAngleLabel;
     }
 }
 

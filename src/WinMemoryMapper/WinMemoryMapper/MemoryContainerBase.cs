@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SendInputLib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,9 +24,20 @@ namespace WinMemoryMapper
         /// Initializes the specified memory mapper.
         /// </summary>
         /// <param name="memMapper">The memory mapper.</param>
-        public void Initialize(IMemoryMapper memMapper)
+        public void Initialize(IMemoryMapper memMapper, ISendMessageService inputService)
         {
             this.Mapper = memMapper;
+            this.Input = inputService;
+        }
+
+        /// <summary>
+        /// Initializes the specified parent.
+        /// </summary>
+        /// <param name="parent">The parent.</param>
+        public void Initialize(MemoryContainerBase parent)
+        {
+            this.Mapper = parent.Mapper;
+            this.Input = parent.Input;
         }
 
         /// <summary>
@@ -35,5 +47,13 @@ namespace WinMemoryMapper
         /// The memory mapper.
         /// </value>
         public IMemoryMapper Mapper { get; set; }
+
+        /// <summary>
+        /// Gets or sets the input.
+        /// </summary>
+        /// <value>
+        /// The input.
+        /// </value>
+        public ISendMessageService Input { get; set; }
     }
 }

@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinMemoryMapper", "WinMemoryMapper\WinMemoryMapper.csproj", "{283B3583-E480-40CE-ACC6-4FBF39452468}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapperTest", "MapperTest\MapperTest.csproj", "{20BD56B0-69DA-4ECC-BAD5-48263245CC4C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D3MemDataLayer", "D3MemDataLayer\D3MemDataLayer.csproj", "{551DEB48-133D-4E0F-A773-8A65DDA2442F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheComptroller", "DeeThreeComptroller\TheComptroller.csproj", "{667B1DEE-399B-4A2C-9425-85FB310523D1}"
@@ -23,10 +21,6 @@ Global
 		{283B3583-E480-40CE-ACC6-4FBF39452468}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{283B3583-E480-40CE-ACC6-4FBF39452468}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{283B3583-E480-40CE-ACC6-4FBF39452468}.Release|Any CPU.Build.0 = Release|Any CPU
-		{20BD56B0-69DA-4ECC-BAD5-48263245CC4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{20BD56B0-69DA-4ECC-BAD5-48263245CC4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{20BD56B0-69DA-4ECC-BAD5-48263245CC4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{20BD56B0-69DA-4ECC-BAD5-48263245CC4C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{551DEB48-133D-4E0F-A773-8A65DDA2442F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{551DEB48-133D-4E0F-A773-8A65DDA2442F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{551DEB48-133D-4E0F-A773-8A65DDA2442F}.Release|Any CPU.ActiveCfg = Release|Any CPU

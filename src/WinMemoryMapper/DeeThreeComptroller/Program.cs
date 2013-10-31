@@ -24,8 +24,8 @@ namespace DeeThreeComptroller
                 throw new NullReferenceException("process");
             }
 
-            var DataService = new ObjectManager(process);
             var InputService = new SendMessageService(process);
+            var DataService = new ObjectManager(process, InputService);
             var LogicService = new BasicLogicService(DataService, InputService);
 
             Console.Out.WriteLine(DataService.Player.CharacterName);

@@ -44,6 +44,12 @@
     <Compile Include="MemoryMapperService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SendInputLib\SendInputLib.csproj">
+      <Project>{5bf7dd3e-20d8-4a99-b90b-f34306b73ea6}</Project>
+      <Name>SendInputLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
