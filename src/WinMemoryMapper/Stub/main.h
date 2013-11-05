@@ -6,12 +6,13 @@
 #include <Windows.h>
 
 typedef struct _INIT_STRUCT {
-	LPCWSTR Title;
-	LPCWSTR Message;
+	int X;
+	int Y;
 } INIT_STRUCT, *PINIT_STRUCT;
 
 DWORD WINAPI DllMain( HMODULE, DWORD_PTR, LPVOID );
-extern "C" __declspec(dllexport) void Initialise( void );
-extern "C" __declspec(dllexport) void InitWithMessage( PVOID );
+extern "C" __declspec(dllexport) void ApplyHook( void );
+extern "C" __declspec(dllexport) void RemoveHook( void );
+extern "C" __declspec(dllexport) void SetPoint( PVOID );
 
 #endif

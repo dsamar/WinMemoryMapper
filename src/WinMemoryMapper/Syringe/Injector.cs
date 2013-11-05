@@ -82,7 +82,10 @@ namespace Syringe
                 }
                 finally
                 {
-                    Imports.CloseHandle(hModule);
+                    if (hModule != null)
+                    {
+                        Imports.FreeLibrary(hModule);
+                    }
                 }
             }
         }

@@ -2,6 +2,7 @@
 using D3MemDataLayer.Constants;
 using LogicServiceLib;
 using SendInputLib;
+using Syringe;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -115,6 +116,7 @@ namespace DeeThreeComptroller
         private void AbortLogicButton_Click(object sender, EventArgs e)
         {
             this.LogicService.AbortLogic();
+            this.InputService.ClearCursor();
         }
 
         /// <summary>
@@ -124,10 +126,17 @@ namespace DeeThreeComptroller
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void StartLogicButton_Click(object sender, EventArgs e)
         {
+            try
+            {
+                this.InputService.PInjector.InjectLibrary("Stub.dll");
+                this.InputService.PInjector.CallExport("Stub.dll", "ApplyHook");
+            }
+            catch
+            {
+                Console.WriteLine("Injection Error");
+            }            
             this.LogicService.RunLogic();
         }
-
-
 
         public BackgroundWorker RefreshWorker { get; set; }
     }

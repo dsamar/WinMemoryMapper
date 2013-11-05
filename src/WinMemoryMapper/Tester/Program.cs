@@ -13,29 +13,19 @@ namespace Tester
         [StructLayout(LayoutKind.Sequential)]
         struct MessageStruct
         {
-            [CustomMarshalAs(CustomUnmanagedType.LPWStr)]
-            public string Text;
-            [CustomMarshalAs(CustomUnmanagedType.LPWStr)]
-            public string Caption;
+            public int X;
+            public int Y;
         }
         static void Main(string[] args)
         {
             Console.WriteLine("Trying to inject dll into TestGetCursorPosApp.exe");
-            MessageStruct messageData = new MessageStruct() { Text = "Custom Message", Caption = "Custom Message Box" };
+            MessageStruct messageData = new MessageStruct() { X = 100, Y = 100 };
             using (Injector syringe = new Injector(Process.GetProcessesByName("TestGetCursorPosApp")[0]))
             {
                 syringe.InjectLibrary("Stub.dll");
-
-                Console.WriteLine("Stub.dll injected into process, trying to call void Initialise() with no parameters");
-                Console.ReadLine();
-                syringe.CallExport("Stub.dll", "Initialise");
-                Console.WriteLine("Waiting...");
-                Console.ReadLine();
-                Console.WriteLine("Trying to call InitWithMessage( PVOID ) with custom data {0}", messageData);
-                Console.ReadLine();
-                syringe.CallExport("Stub.dll", "InitWithMessage", messageData);
-                Console.WriteLine("Waiting...");
-                Console.ReadLine();
+                syringe.CallExport("Stub.dll", "ApplyHook");
+                syringe.CallExport("Stub.dll", "SetPoint", messageData);
+                syringe.CallExport("Stub.dll", "RemoveHook");
             }
             Console.WriteLine("Stub.dll should be ejected");
             Console.ReadLine();
